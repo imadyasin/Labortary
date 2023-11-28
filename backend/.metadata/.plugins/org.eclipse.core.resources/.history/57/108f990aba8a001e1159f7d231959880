@@ -1,0 +1,21 @@
+package com.example.laboratory.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.laboratory.entity.UserFile;
+import com.example.laboratory.repository.UserFileRepository;
+
+@Service
+public class UserFileService {
+
+	@Autowired
+	private UserFileRepository userFileRepository;
+	
+	public String saveImage(UserFile userFile) {
+		userFileRepository.save(userFile);
+		
+		return"Image Saved in Database";
+		
+	}
+}

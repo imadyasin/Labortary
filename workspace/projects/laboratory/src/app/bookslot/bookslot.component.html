@@ -1,0 +1,21 @@
+<div class="container2">
+  <div class="form-container">
+    <form action="#" method="post">
+
+      <label for="yourName">Your Name:</label>
+      <input type="text" id="yourName" name="yourName" required [(ngModel)]="contactInfo.name">
+
+
+      <label for="yourMobile">Your Mobile Number:</label>
+      <input type="tel" id="yourMobile" name="yourMobile" required [(ngModel)]="contactInfo.number">
+
+
+
+      <label for="yourMail">Your Mail:</label>
+      <input type="email" id="yourMail" name="yourMail" required [(ngModel)]="contactInfo.email">
+
+
+      <button type="submit" (click)="sendEmail()">Book Slot</button>
+    </form>
+  </div>
+</div>

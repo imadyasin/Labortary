@@ -1,0 +1,14 @@
+package com.example.laboratory.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.laboratory.entity.UserFile;
+
+
+@Repository
+public interface UserFileRepository extends JpaRepository<UserFile, Long> {
+	
+	
+
+}

@@ -1,0 +1,8 @@
+package com.example.laboratory.entity;
+
+import org.springframework.stereotype.Entity;
+
+@Entity
+public class UserFile {
+
+}

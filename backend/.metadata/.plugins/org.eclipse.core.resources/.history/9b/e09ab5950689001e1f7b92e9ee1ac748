@@ -1,0 +1,16 @@
+package com.example.laboratory.entity;
+
+
+@Entity
+public class UserFile {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private String name;
+	private String email;
+	private String filePath;
+	
+
+}

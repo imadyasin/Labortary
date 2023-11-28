@@ -1,0 +1,69 @@
+<div class="container2">
+  <div class="form-container">
+    <form [formGroup]="searchForm" (ngSubmit)="success()">
+      <div class="form-group ">
+        <label for="userEmail">Enter Your Email</label>
+        <input type="email" id="userEmail" formControlName="userEmail" class="form-control" required>
+      </div>
+      <ngx-recaptcha2 #captchaElem
+      [siteKey]="sitekey"
+      (onSuccess)="onCaptchaSuccess()"
+      formControlName="recaptcha" >
+      </ngx-recaptcha2>
+      <button type="submit" >Get</button>
+    </form>
+  </div>
+
+</div>
+<br>
+
+<div class="container1">
+  <div style="text-align: center;" *ngIf="files && files.length">
+    <div *ngFor="let file of files">
+    <p>Hello, <span style="color: red; text-transform: uppercase;"> {{file.name}} </span>
+      Your report is Ready , You can download it by Clicking on download button below..
+    </p>
+    <a [href]="file.image | base64" download="{{file.name}}.jpg" >
+      <button class="btn-custom" style="width: 100px;">
+        Download
+      </button>
+    </a>
+  </div>
+  </div>
+
+  <div style="text-align: center;" *ngIf="error1">
+    <p style="color: red;">Incorrect Email / Your Report is not Ready.!</p>
+  </div>
+
+</div>
+
+
+<!--<div *ngIf="files && files.length">
+  <h3>Search Results:</h3>
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th scope="col">User ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Download Report</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let file of files">
+        <td>{{ file.userId }}</td>
+        <td>{{ file.name }}</td>
+        <td>{{ file.email }}</td>
+        <td>
+          <a [href]="file.image | base64" download="{{file.name}}.jpg" class="custom-download-link">
+            <button class="btn btn-custom">
+              Download
+            </button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+

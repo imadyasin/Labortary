@@ -1,0 +1,23 @@
+package com.example.laboratory.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.laboratory.entity.UserFile;
+import com.example.laboratory.repository.UserFileRepository;
+
+@Service
+public class UserFileService {
+
+	@Autowired
+	private UserFileRepository userFileRepository;
+	
+	public void saveUserFile(UserFile userFile) {
+        userFileRepository.save(userFile);
+    }
+
+    public String getFilePathByEmail(String email) {
+        UserFile userFile = userFileRepository.findByEmail(email);
+        return (userFile != null) ? userFile.getFilePath() : null;
+    }
+}

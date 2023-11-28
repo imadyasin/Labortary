@@ -1,0 +1,8 @@
+package com.example.laboratory.entity;
+
+
+@Entity
+public class UserFile {
+	
+
+}

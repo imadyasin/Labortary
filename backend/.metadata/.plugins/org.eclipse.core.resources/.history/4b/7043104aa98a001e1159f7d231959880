@@ -1,0 +1,11 @@
+package com.example.laboratory.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.laboratory.entity.UserFile;
+
+public interface UserFileRepository extends JpaRepository<UserFile, Long> {
+	
+	UserFile findByEmail(String email);
+
+}
