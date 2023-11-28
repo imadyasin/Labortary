@@ -12,11 +12,15 @@ body {
   color: white;
   padding: 10px 20px;
   background-color: rgb(61, 220, 145);
-  height: 80px;
+  height: 60px;
 
 }
 .nav-item{
   font-size: 1.2rem;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+
 }
 
 .navbar-nav {
@@ -29,17 +33,17 @@ body {
 
 .navbar-nav .nav-link {
   text-decoration: none;
-  color: white;
+  color: rgb(97, 91, 91);
   transition: background-color 0.3s,color 0.3s ease;
 }
 .navbar-nav .nav-link:hover {
   background-color: white;
   color: #66c2ff;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
 }
 .btn1{
-  color: black;
+  color: rgb(56, 55, 55);
   transition: background-color 0.3s,color 0.3s ease;
 }
 .btn1:hover{
